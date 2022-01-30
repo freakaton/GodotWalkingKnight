@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/DialogBox.gd" type="Script" id=1]
+[ext_resource path="res://Assets/PressStart2P-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[sub_resource type="DynamicFont" id=3]
+size = 8
+extra_spacing_space = -3
+font_data = ExtResource( 2 )
+
+[node name="DialogueBox" type="Control"]
+material = SubResource( 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PopupDialog" type="PopupDialog" parent="CanvasLayer"]
+visible = true
+modulate = Color( 0.72549, 0.811765, 0.270588, 1 )
+show_behind_parent = true
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -136.0
+margin_top = -68.0
+margin_right = 120.0
+margin_bottom = -16.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PopupDialog"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.72549, 0.811765, 0.270588, 0.768627 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/PopupDialog"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_right = -7.0
+margin_bottom = -3.0
+custom_fonts/font = SubResource( 3 )
+text = "Эй Богда ! Богдан! Богом дан! Эй Богдан! Я здесь! Позвони мне! я есть хочу, ну тетенька продайте Мне покушать!!!"
+valign = 1
+autowrap = true
+max_lines_visible = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
