@@ -1,0 +1,96 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/MiniGames/Snake/Level.gd" type="Script" id=1]
+[ext_resource path="res://Assets/snake.png" type="Texture" id=2]
+
+[sub_resource type="TileSet" id=1]
+0/name = "snake"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 8, 0, 40, 8 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 8, 8 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "small_berry"
+1/texture = ExtResource( 2 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 48, 40, 8, 8 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+4/name = "background"
+4/texture = ExtResource( 2 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 40, 16, 8, 8 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "border"
+5/texture = ExtResource( 2 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 56, 16, 8, 8 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+
+[node name="Level" type="Panel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -156.0
+margin_top = 10.0
+margin_right = 156.0
+margin_bottom = 243.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SnakeApple" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 8, 8 )
+cell_custom_transform = Transform2D( 8, 0, 0, 8, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 0, 5, 0, 1, 5, 0, 2, 5, 0, 3, 5, 0, 4, 5, 0, 5, 5, 0, 6, 5, 0, 7, 5, 0, 8, 5, 0, 9, 5, 0, 10, 5, 0, 11, 5, 0, 12, 5, 0, 13, 5, 0, 14, 5, 0, 15, 5, 0, 16, 5, 0, 17, 5, 0, 18, 5, 0, 19, 5, 0, 20, 5, 0, 21, 5, 0, 22, 5, 0, 23, 5, 0, 24, 5, 0, 25, 5, 0, 26, 5, 0, 27, 5, 0, 28, 5, 0, 29, 5, 0, 30, 5, 0, 31, 5, 0, 32, 5, 0, 33, 5, 0, 34, 5, 0, 35, 5, 0, 36, 5, 0, 37, 5, 0, 38, 5, 0, 65536, 5, 0, 65574, 5, 0, 131072, 5, 0, 131110, 5, 0, 196608, 5, 0, 196646, 5, 0, 262144, 5, 0, 262182, 5, 0, 327680, 5, 0, 327718, 5, 0, 393216, 5, 0, 393254, 5, 0, 458752, 5, 0, 458790, 5, 0, 524288, 5, 0, 524326, 5, 0, 589824, 5, 0, 589862, 5, 0, 655360, 5, 0, 655398, 5, 0, 720896, 5, 0, 720934, 5, 0, 786432, 5, 0, 786470, 5, 0, 851968, 5, 0, 852006, 5, 0, 917504, 5, 0, 917542, 5, 0, 983040, 5, 0, 983078, 5, 0, 1048576, 5, 0, 1048614, 5, 0, 1114112, 5, 0, 1114150, 5, 0, 1179648, 5, 0, 1179686, 5, 0, 1245184, 5, 0, 1245222, 5, 0, 1310720, 5, 0, 1310758, 5, 0, 1376256, 5, 0, 1376294, 5, 0, 1441792, 5, 0, 1441830, 5, 0, 1507328, 5, 0, 1507366, 5, 0, 1572864, 5, 0, 1572902, 5, 0, 1638400, 5, 0, 1638438, 5, 0, 1703936, 5, 0, 1703974, 5, 0, 1769472, 5, 0, 1769510, 5, 0, 1835008, 5, 0, 1835009, 5, 0, 1835010, 5, 0, 1835011, 5, 0, 1835012, 5, 0, 1835013, 5, 0, 1835014, 5, 0, 1835015, 5, 0, 1835016, 5, 0, 1835017, 5, 0, 1835018, 5, 0, 1835019, 5, 0, 1835020, 5, 0, 1835021, 5, 0, 1835022, 5, 0, 1835023, 5, 0, 1835024, 5, 0, 1835025, 5, 0, 1835026, 5, 0, 1835027, 5, 0, 1835028, 5, 0, 1835029, 5, 0, 1835030, 5, 0, 1835031, 5, 0, 1835032, 5, 0, 1835033, 5, 0, 1835034, 5, 0, 1835035, 5, 0, 1835036, 5, 0, 1835037, 5, 0, 1835038, 5, 0, 1835039, 5, 0, 1835040, 5, 0, 1835041, 5, 0, 1835042, 5, 0, 1835043, 5, 0, 1835044, 5, 0, 1835045, 5, 0, 1835046, 5, 0 )

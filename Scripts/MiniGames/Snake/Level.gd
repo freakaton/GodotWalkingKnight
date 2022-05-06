@@ -18,7 +18,7 @@ var arena_size = Vector2()
 var score = 0
 var snake = []
 var current_berry
-onready var score_label = get_node("../InfoPanel/Score")
+onready var score_label = get_node("../../InfoPanel/Score")
 
 var START_POSITION = [
 	Vector2(1, 5),
@@ -60,7 +60,7 @@ func get_next_cell(last_cell: Vector2) -> Vector2:
 			ret.y += 1
 	return ret
 
-func _on_RefreshTimer_timeout():
+func update():
 	# print(snake)
 	var next_cell = get_next_cell(snake[0])
 	match $SnakeApple.get_cell(next_cell.x, next_cell.y):
@@ -111,9 +111,8 @@ func start_game():
 			cell.x, cell.y, SNAKE, false, false, false, Vector2(4,0)
 		)
 	current_berry = generate_berry()
-	$'../EndGamePanel'.hide()
-	$'../FinishGamePanel'.hide()
-	$'../RefreshTimer'.start()
+	$'../../EndGamePanel'.hide()
+	$'../../FinishGamePanel'.hide()
 
 func clean_arena():
 	var rect = get_rect()

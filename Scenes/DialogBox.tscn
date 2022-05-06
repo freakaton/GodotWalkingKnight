@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/DialogBox.gd" type="Script" id=1]
-[ext_resource path="res://Assets/PressStartSmall.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/DialogBoxStyle.tres" type="Theme" id=3]
 
 [sub_resource type="CanvasItemMaterial" id=1]
 
@@ -9,6 +9,7 @@
 material = SubResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 3 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -28,14 +29,7 @@ margin_left = -136.0
 margin_top = -68.0
 margin_right = 120.0
 margin_bottom = -16.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/PopupDialog"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0.72549, 0.811765, 0.270588, 0.768627 )
+theme = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -47,7 +41,6 @@ anchor_bottom = 1.0
 margin_left = 8.0
 margin_right = -7.0
 margin_bottom = -3.0
-custom_fonts/font = ExtResource( 2 )
 text = "Лорем ипсум долор сит амет, вих ех харум маиорум, адмодум опортеат сигниферумяуе не яуо. Тале темпор пертинах вих ат. Хас не аппеллантур нецесситатибус, но вих ностер дицунт перицула, интегре саперет сцаевола еа еос. Ад хендрерит сигниферумяуе сит, магна ментитум меа еа."
 valign = 1
 autowrap = true
