@@ -3,4 +3,4 @@
 [ext_resource path="res://Scenes/MiniGames/Snake/BaseLevel.tscn" type="PackedScene" id=1]
 
 [node name="Level" instance=ExtResource( 1 )]
-level = 1
+score_to_finish = 20

@@ -70,10 +70,10 @@ func update():
 		BERRY:
 			add_score(3)
 			current_berry = null
-
-	var cell_to_clear = snake.pop_back()	
+		_:
+			var cell_to_clear = snake.pop_back()	
+			$SnakeApple.set_cell(cell_to_clear.x, cell_to_clear.y, CLEAR)
 	snake.push_front(next_cell)
-	$SnakeApple.set_cell(cell_to_clear.x, cell_to_clear.y, CLEAR)
 	$SnakeApple.set_cell(
 		next_cell.x, next_cell.y, SNAKE, false, false, false, Vector2(4,0)
 	)
