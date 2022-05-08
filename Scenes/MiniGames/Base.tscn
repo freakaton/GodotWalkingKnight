@@ -1,0 +1,217 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/PressStartBig.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/PressStartSmall.tres" type="DynamicFont" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Background" type="ColorRect" parent="."]
+modulate = Color( 0.105882, 0.129412, 0.0156863, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelContainer" type="Node" parent="."]
+
+[node name="RefreshTimer" type="Timer" parent="LevelContainer"]
+wait_time = 0.15
+
+[node name="EndGamePanel" type="Panel" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -156.0
+margin_top = -159.0
+margin_right = 156.0
+margin_bottom = -57.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="EndGamePanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = -17.0
+margin_right = 64.0
+margin_bottom = 17.0
+custom_fonts/font = ExtResource( 1 )
+text = "Restart"
+
+[node name="Label" type="Label" parent="EndGamePanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -82.0
+margin_right = 82.0
+margin_bottom = 35.0
+custom_fonts/font = ExtResource( 1 )
+text = "You dead"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinishGamePanel" type="Panel" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -120.0
+margin_top = -172.0
+margin_right = 116.0
+margin_bottom = -92.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="FinishGamePanel"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -62.0
+margin_top = -40.0
+margin_right = 66.0
+margin_bottom = -6.0
+custom_fonts/font = ExtResource( 1 )
+text = "Continue"
+
+[node name="Label" type="Label" parent="FinishGamePanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -82.0
+margin_right = 82.0
+margin_bottom = 35.0
+custom_fonts/font = ExtResource( 1 )
+text = "Finish!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WinGamePanel" type="Panel" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -156.0
+margin_top = -159.0
+margin_right = 156.0
+margin_bottom = -57.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="WinGamePanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = -17.0
+margin_right = 64.0
+margin_bottom = 17.0
+custom_fonts/font = ExtResource( 1 )
+text = "Return"
+
+[node name="Label" type="Label" parent="WinGamePanel"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -82.0
+margin_right = 82.0
+margin_bottom = 35.0
+custom_fonts/font = ExtResource( 1 )
+text = "You win!!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoPanel" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 44.0
+margin_top = -57.0625
+margin_right = -44.0
+margin_bottom = -0.0625
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="InfoPanel"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -89.0
+margin_right = -41.0
+margin_bottom = 12.0
+custom_fonts/font = ExtResource( 2 )
+text = "Score:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="InfoPanel"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -41.0
+margin_bottom = 12.0
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+align = 1
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelLabel" type="Label" parent="InfoPanel"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -89.0
+margin_top = 23.0
+margin_right = -41.0
+margin_bottom = 35.0
+custom_fonts/font = ExtResource( 2 )
+text = "Level:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Level" type="Label" parent="InfoPanel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -41.0
+margin_top = -5.5
+margin_bottom = 6.5
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+align = 1
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
