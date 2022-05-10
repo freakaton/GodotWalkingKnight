@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scripts/MiniGames/Snake/Level.gd" type="Script" id=1]
-[ext_resource path="res://Assets/snake.png" type="Texture" id=2]
+[ext_resource path="res://Assets/MiniGames/Snake/snake.png" type="Texture" id=2]
 
 [sub_resource type="TileSet" id=1]
 0/name = "snake"
@@ -68,22 +68,10 @@
 5/shapes = [  ]
 5/z_index = 0
 
-[node name="Level" type="Panel"]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = -156.0
-margin_top = 10.0
-margin_right = 156.0
-margin_bottom = 243.0
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="CenterContainer" type="CenterContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-color = Color( 0, 0, 0, 1 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

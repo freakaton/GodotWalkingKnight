@@ -1,11 +1,11 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Assets/PressStartBig.tres" type="DynamicFont" id=1]
-[ext_resource path="res://Assets/PressStartSmall.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/Fonts/PressStartBig.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Fonts/PressStartSmall.tres" type="DynamicFont" id=2]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="GameBase" type="CanvasLayer"]
 
 [node name="Background" type="ColorRect" parent="."]
 modulate = Color( 0.105882, 0.129412, 0.0156863, 1 )
@@ -15,10 +15,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="LevelContainer" type="Node" parent="."]
+[node name="LevelContainer" type="Panel" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -154.0
+margin_top = 8.0
+margin_right = 154.0
+margin_bottom = 243.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="RefreshTimer" type="Timer" parent="LevelContainer"]
-wait_time = 0.15
+[node name="ColorRect" type="ColorRect" parent="LevelContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="EndGamePanel" type="Panel" parent="."]
 visible = false

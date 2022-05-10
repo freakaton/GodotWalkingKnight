@@ -1,4 +1,4 @@
-extends Panel
+extends CenterContainer
 
 signal game_over
 signal level_finished

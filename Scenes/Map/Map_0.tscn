@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Map/MapFactory.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/Interactables/GoldenShield.png" type="Texture" id=2]
+[ext_resource path="res://Assets/MainMap/GoldenShield.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/GameTexture.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Teleport.tscn" type="PackedScene" id=4]
 
